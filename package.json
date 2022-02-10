@@ -1,0 +1,30 @@
+{
+  "name": "scrapswap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run watch:all",
+    "lite": "lite-server",
+    "scss": "node-sass -o css/ css/",
+    "watch:scss": "onchange 'css/*.scss' -- npm run scss",
+    "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CRothgeb/ScrapSwap.git"
+  },
+  "author": "Chris Rothgeb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CRothgeb/ScrapSwap/issues"
+  },
+  "homepage": "https://github.com/CRothgeb/ScrapSwap#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1",
+    "node-sass": "^7.0.1",
+    "onchange": "^7.0.0",
+    "parallelshell": "3.0.1"
+  }
+}
